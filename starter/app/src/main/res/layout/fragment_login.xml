@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.udacity.shoestore.viewmodels.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:orientation="vertical">
+            <TextView
+                style="@style/Text.Large"
+                android:layout_marginTop="@dimen/margin_huge"
+                android:layout_marginBottom="@dimen/margin_huge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="@string/login_title"/>
+
+            <TextView
+                style="@style/Text.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_title"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:inputType="textEmailAddress"/>
+
+            <TextView
+                style="@style/Text.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/password_title"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:inputType="textPassword"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/PrimaryColoredButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> loginViewModel.onNavigate()}"
+                android:text="@string/btn_login"/>
+
+            <TextView
+                android:id="@+id/btnCreateAccount"
+                style="@style/Text.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:textAlignment="center"
+                android:onClick="@{() -> loginViewModel.onNavigate()}"
+                android:text="@string/btn_create_account"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="login_title">Shoe Store Inventory</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_create_account">No Account? Create one</string>
+    <string name="email_title">Email</string>
+    <string name="password_title">Password</string>
+    <string name="fragment_login_title">Login</string>
+    <string name="fragment_welcome_title">Welcome</string>
 </resources>
