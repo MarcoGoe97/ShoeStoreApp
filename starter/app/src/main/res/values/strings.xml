@@ -7,4 +7,11 @@
     <string name="password_title">Password</string>
     <string name="fragment_login_title">Login</string>
     <string name="fragment_welcome_title">Welcome</string>
+    <string name="fragment_instructions_title">Instructions</string>
+    <string name="welcome_title">Hello!</string>
+    <string name="welcome_message">Welcome to the only app you need to organize your shoes!</string>
+    <string name="btn_welcome_continue">Continue</string>
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions_message">On the main screen you see all your shoes.\n\nTo add a new pair of shoes press add.</string>
+    <string name="btn_start">Start</string>
 </resources>

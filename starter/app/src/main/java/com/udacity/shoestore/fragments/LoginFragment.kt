@@ -16,18 +16,17 @@ class LoginFragment : Fragment() {
 
     private lateinit var viewModel : LoginViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding : FragmentLoginBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_login, container, false)
 
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.loginViewModel = viewModel
 
-        viewModel.navigate.observe(viewLifecycleOwner) { navigate ->
+        viewModel.login.observe(viewLifecycleOwner) { navigate ->
             if(navigate){
                 toWelcomeScreen()
-                viewModel.navigateDone()
+                viewModel.loginDone()
             }
         }
 

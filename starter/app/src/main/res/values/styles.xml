@@ -19,12 +19,17 @@
     <style name="Text" parent="TextAppearance.AppCompat">
         <item name="fontFamily">@font/roboto_regular</item>
     </style>
-    <style name="Text.Large">
-        <item name="android:textSize">@dimen/text_huge</item>
-    </style>
 
     <style name="Text.Normal">
         <item name="android:textSize">@dimen/text_standard</item>
+    </style>
+
+    <style name="Text.Large">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="Text.Huge">
+        <item name="android:textSize">@dimen/text_huge</item>
     </style>
 
     <style name="PrimaryColoredButton" parent="Base.Widget.AppCompat.Button.Colored">

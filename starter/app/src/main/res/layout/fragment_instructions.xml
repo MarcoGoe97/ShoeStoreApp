@@ -5,7 +5,7 @@
     <data>
         <variable
             name="welcomeViewModel"
-            type="com.udacity.shoestore.viewmodels.WelcomeViewModel" />
+            type="com.udacity.shoestore.viewmodels.InstructionsViewModel" />
 
     </data>
 
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_huge"
-            android:text="@string/welcome_title"
+            android:text="@string/instructions_title"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,21 +34,21 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_huge"
             android:textAlignment="center"
-            android:text="@string/welcome_message"
-            app:layout_constraintBottom_toTopOf="@+id/btnToInstructions"
+            android:text="@string/instructions_message"
+            app:layout_constraintBottom_toTopOf="@+id/btnStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
             app:layout_constraintVertical_chainStyle="spread_inside" />
 
         <Button
-            android:id="@+id/btnToInstructions"
+            android:id="@+id/btnStart"
             style="@style/PrimaryColoredButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_huge"
-            android:text="@string/btn_welcome_continue"
-            android:onClick="@{() -> welcomeViewModel.onToInstructions()}"
+            android:text="@string/btn_start"
+            android:onClick="@{() -> welcomeViewModel.onStart()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

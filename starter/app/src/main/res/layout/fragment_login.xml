@@ -18,7 +18,7 @@
             android:layout_marginEnd="@dimen/margin_large"
             android:orientation="vertical">
             <TextView
-                style="@style/Text.Large"
+                style="@style/Text.Huge"
                 android:layout_marginTop="@dimen/margin_huge"
                 android:layout_marginBottom="@dimen/margin_huge"
                 android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                 style="@style/PrimaryColoredButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="@{() -> loginViewModel.onNavigate()}"
+                android:onClick="@{() -> loginViewModel.onLogin()}"
                 android:text="@string/btn_login"/>
 
             <TextView
@@ -66,7 +66,7 @@
                 android:layout_marginTop="@dimen/margin_small"
                 android:layout_marginBottom="@dimen/margin_normal"
                 android:textAlignment="center"
-                android:onClick="@{() -> loginViewModel.onNavigate()}"
+                android:onClick="@{() -> loginViewModel.onLogin()}"
                 android:text="@string/btn_create_account"/>
 
         </LinearLayout>

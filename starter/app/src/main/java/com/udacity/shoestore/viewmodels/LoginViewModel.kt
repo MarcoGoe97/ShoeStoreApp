@@ -5,15 +5,16 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class LoginViewModel :ViewModel() {
-    private val _navigate = MutableLiveData<Boolean>()
-    val navigate : LiveData<Boolean>
-        get() = _navigate
 
-    fun onNavigate() {
-        _navigate.value = true
+    private val _login = MutableLiveData<Boolean>()
+    val login : LiveData<Boolean>
+        get() = _login
+
+    fun onLogin() {
+        _login.value = true
     }
 
-    fun navigateDone() {
-        _navigate.value = false
+    fun loginDone() {
+        _login.value = false
     }
 }
