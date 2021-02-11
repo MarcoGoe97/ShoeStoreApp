@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 import com.udacity.shoestore.viewmodels.LoginViewModel
@@ -34,6 +34,6 @@ class LoginFragment : Fragment() {
     }
 
     private fun toWelcomeScreen() {
-        findNavController(this).navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
+        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
     }
 }

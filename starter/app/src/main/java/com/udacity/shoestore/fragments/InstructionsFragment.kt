@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 import com.udacity.shoestore.viewmodels.InstructionsViewModel
@@ -33,6 +34,6 @@ class InstructionsFragment : Fragment() {
     }
 
     private fun toMainScreen() {
-
+        findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeOverviewFragment())
     }
 }
