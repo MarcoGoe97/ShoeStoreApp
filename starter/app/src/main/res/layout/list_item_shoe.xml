@@ -42,8 +42,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginTop="@dimen/margin_small"
-            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
             android:background="@color/gray" />
     </LinearLayout>
 

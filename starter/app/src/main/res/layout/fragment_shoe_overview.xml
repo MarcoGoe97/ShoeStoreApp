@@ -8,28 +8,41 @@
             type="com.udacity.shoestore.viewmodels.ShoeOverviewViewModel" />
     </data>
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/mainLayout"
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_large"
-            android:layout_marginEnd="@dimen/margin_large"
-            android:orientation="vertical"
-            android:gravity="end">
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/addButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_large"
-                android:src="@drawable/ic_add"
-                android:onClick="@{() -> viewModel.addShoe()}"
-                android:contentDescription="@string/add_button_description" />
-        </LinearLayout>
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:orientation="vertical"/>
+        </ScrollView>
 
-    </ScrollView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_large"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:src="@drawable/ic_add"
+            android:onClick="@{() -> viewModel.addShoe()}"
+            android:contentDescription="@string/add_button_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
