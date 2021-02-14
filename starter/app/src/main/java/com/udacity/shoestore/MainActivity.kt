@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         val navController = this.findNavController(R.id.myNavHostFragment)
         val appBarConfiguration = AppBarConfiguration(setOf(R.id.loginFragment, R.id.shoeOverviewFragment))
