@@ -8,6 +8,9 @@
             type="com.udacity.shoestore.viewmodels.ShoeOverviewViewModel" />
     </data>
 
+    <!--ConstraintLayout is used to position the Button in the bottom right corner
+    Scrollview then can be spread over the rest of the screen
+    from top to the button -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,6 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
+            <!--LinearLayout is used to keep it simple. The views are just vertically aligned-->
             <LinearLayout
                 android:id="@+id/mainLayout"
                 android:layout_width="match_parent"

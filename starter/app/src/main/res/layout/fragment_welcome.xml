@@ -9,6 +9,9 @@
 
     </data>
 
+    <!--ConstraintLayout is used to enable chains.
+     The button should always be spread to bottom
+     regardless of the screen size-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
