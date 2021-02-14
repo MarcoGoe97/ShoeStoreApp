@@ -29,7 +29,8 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:text="@={viewModel.name}"/>
 
             <TextView
                 style="@style/Text.Normal"
@@ -41,7 +42,8 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:text="@={viewModel.company}"/>
 
             <TextView
                 style="@style/Text.Normal"
@@ -53,19 +55,21 @@
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal"
+                android:text="@={viewModel.size}"/>
 
             <TextView
                 style="@style/Text.Normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_normal"
-                android:text="@string/shoe_description"/>
+                android:text="@string/shoe_description" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"/>
+                android:inputType="text"
+                android:text="@={viewModel.description}"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

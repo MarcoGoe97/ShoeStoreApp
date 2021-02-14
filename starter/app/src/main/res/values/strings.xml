@@ -24,4 +24,8 @@
     <string name="shoe_description">Description</string>
     <string name="button_cancel">Cancel</string>
     <string name="button_save">Save</string>
+    <string name="item_name">Name: %1$s</string>
+    <string name="item_description">Description: %1$s</string>
+    <string name="item_size">Size: %1$s</string>
+    <string name="item_company">Company: %1$s</string>
 </resources>

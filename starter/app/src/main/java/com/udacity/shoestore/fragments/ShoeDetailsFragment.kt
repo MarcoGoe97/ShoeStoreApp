@@ -17,7 +17,7 @@ import com.udacity.shoestore.viewmodels.ShoeViewModel
 class ShoeDetailsFragment : Fragment(){
 
     private lateinit var viewModel : ShoeDetailsViewModel
-    val shoeViewModel by activityViewModels<ShoeViewModel>()
+    private val shoeViewModel by activityViewModels<ShoeViewModel>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding : FragmentShoeDetailsBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_details, container, false)
@@ -39,6 +39,15 @@ class ShoeDetailsFragment : Fragment(){
             }
         }
 
+        viewModel.name.observe(viewLifecycleOwner){ viewModel.onTextChanged() }
+        viewModel.company.observe(viewLifecycleOwner){ viewModel.onTextChanged() }
+        viewModel.size.observe(viewLifecycleOwner){ viewModel.onTextChanged() }
+        viewModel.description.observe(viewLifecycleOwner){ viewModel.onTextChanged() }
+
+        viewModel.validateData.observe(viewLifecycleOwner) {
+            binding.save.isEnabled = it
+        }
+
         return binding.root
     }
 
@@ -47,6 +56,7 @@ class ShoeDetailsFragment : Fragment(){
     }
 
     private fun save() {
+        shoeViewModel.addShoe(viewModel.getShoe())
         findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeOverviewFragment())
     }
 }

@@ -13,10 +13,12 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/mainLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_large"
             android:layout_marginEnd="@dimen/margin_large"
+            android:orientation="vertical"
             android:gravity="end">
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
